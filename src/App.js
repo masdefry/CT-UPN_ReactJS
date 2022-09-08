@@ -1,9 +1,11 @@
 import './App.css';
 import React from 'react';
 import Axios from 'axios';
-import TodoItem from './Components/TodoItem';
-import State from './Components/State';
 import { Routes, Route } from 'react-router-dom';
+import Section1 from './Components/Portfolio/Section1';
+import Section2 from './Components/Portfolio/Section2';
+import Section3 from './Components/Portfolio/Section3';
+import Section4 from './Components/Portfolio/Section4';
 
 class App extends React.Component{
 
@@ -26,28 +28,32 @@ class App extends React.Component{
     this.setState({todos: result})
   }
 
-  onMappingData = () => {
-    return this.state.todos.map((value, index) => {
-      return <TodoItem todo={value.todo} number={value.id} onDelete={this.onDeleteData} />
-    })
-  }
+  // onMappingData = () => {
+  //   return this.state.todos.map((value) => {
+  //     return <TodoItem todo={value.todo} number={value.id} onDelete={this.onDeleteData} />
+  //   })
+  // }
 
   render(){
     return(
       <div>
-        <h1>
+        {/* <h1>
           Todo Lists
-        </h1>
+        </h1> */}
         
         {/* {
           this.onMappingData()
         }
 
         <button className='btn btn-warning' onClick={this.onGetData}>On Get Data</button> */}
-        <Routes>
+        {/* <Routes>
           <Route path='/todoitem' element={<TodoItem />} />
           <Route path='/state' element={<State />} />
-        </Routes>
+        </Routes> */}
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
       </div>
     )
   }
