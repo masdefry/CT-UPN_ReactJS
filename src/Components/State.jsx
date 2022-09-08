@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class State extends React.Component{
 
@@ -21,6 +22,11 @@ class State extends React.Component{
                     {this.state.count1}
                 </h1>
                 <button className='btn btn-primary' onClick={this.onCount}>Count</button>
+                <Link to='/todoitem'>
+                    <h1>
+                        Goto TodoItem
+                    </h1>
+                </Link>
             </div>
         )
     }
