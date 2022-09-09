@@ -5,7 +5,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import TodoItem from './Components/TodoItem/index';
 import State from './Components/State';
 import Home from './Pages/Home';
-import About from './Components/About';
+import Twit from './Components/Twit';
 
 class App extends React.Component{
 
@@ -52,7 +52,7 @@ class App extends React.Component{
           <Route path='/todoitem' element={<TodoItem />} />
           <Route path='/state' element={<State />} />
           <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/twit' element={<Twit />} />
         </Routes>
         {/* <State /> */}
       </div>
